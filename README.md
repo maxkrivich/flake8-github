@@ -1,7 +1,8 @@
 # flake8-github
-
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/maxkrivich/flake8-github/main.svg)](https://results.pre-commit.ci/latest/github/maxkrivich/flake8-github/main)
+[![License](https://img.shields.io/pypi/l/flake8-github.svg)](https://github.com/maxkrivich/flake8-github/blob/main/LICENSE)
 <!-- [![PyPI Version](https://img.shields.io/pypi/v/your-plugin.svg)](https://pypi.org/project/your-plugin/)
-[![License](https://img.shields.io/pypi/l/your-plugin.svg)](https://github.com/your-username/your-plugin/blob/master/LICENSE) -->
+ -->
 
 > This extension seamlessly integrates with Flake8, providing clear and elegant error annotations directly on GitHub's interface, making it easier than ever to identify and address code issues during pull request reviews.
 
@@ -85,4 +86,4 @@ Please ensure your code adheres to the project's coding standards and includes t
 
 ## License
 
-This project is licensed under MIT License - see the LICENSE file for details.
+This project is licensed under MIT License - see the [LICENSE](https://github.com/maxkrivich/flake8-github/blob/master/LICENSE) file for details.
