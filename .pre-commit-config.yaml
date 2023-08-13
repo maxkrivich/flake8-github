@@ -31,10 +31,10 @@ repos:
     rev: v0.19.1
     hooks:
       - id: gitlint
-  - repo: https://github.com/regebro/pyroma
-    rev: "4.2"
-    hooks:
-    -   id: pyroma
+  # - repo: https://github.com/regebro/pyroma
+  #   rev: "4.2"
+  #   hooks:
+  #   -   id: pyroma
   - repo: https://gitlab.com/smop/pre-commit-hooks
     rev: v1.0.0
     hooks:
