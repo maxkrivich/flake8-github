@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flake8-github"
-version = "1.0.0"
+version = "1.0.1"
 description = "Flake8 formatter for GitHub Actions"
 authors = ["Max Kryvych <me@kryvych.cc>"]
 license = "MIT License"
