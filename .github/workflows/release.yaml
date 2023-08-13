@@ -3,6 +3,7 @@ on:
   release:
     types:
       - published
+      - edited
 jobs:
   pypi-publish:
     name: Upload release to PyPI
