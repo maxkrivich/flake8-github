@@ -42,4 +42,6 @@ jobs:
           echo "api-token=${api_token}" >> "${GITHUB_OUTPUT}"
 
       - name: publish
-        run: poetry publish -u __token__ -p ${{ steps.mint-token.outputs.api-token }}
+        run: |
+          poetry config pypi-token.pypi ${{ steps.mint-token.outputs.api-token }}
+          poetry publish
