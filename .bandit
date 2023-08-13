@@ -1,0 +1,4 @@
+[bandit]
+targets = flake8_github/
+recursive = true
+skips = B101

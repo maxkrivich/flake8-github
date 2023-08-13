@@ -1,0 +1,96 @@
+[tool.poetry]
+name = "flake8-github"
+version = "1.0.0"
+description = "Flake8 formatter for GitHub Actions"
+authors = ["Max Kryvych <me@kryvych.cc>"]
+license = "MIT License"
+readme = "README.md"
+packages = [{ include = "flake8_github", from = "." }]
+homepage = "https://github.com/maxkrivich/flake8-github"
+repository = "https://github.com/maxkrivich/flake8-github"
+classifiers = [
+    "Framework :: Flake8",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Quality Assurance",
+    "Development Status :: 5 - Production/Stable",
+    "Operating System :: POSIX",
+    "Typing :: Typed",
+]
+
+keywords = [
+    "flake8",
+    "github",
+    "actions",
+    "formatter",
+    "linter",
+    "qa",
+    "quality",
+    "assurance",
+    "plugin",
+    "report",
+    "reporter",
+    "output",
+    "output formatter",
+    "output formatter",
+]
+
+[tool.poetry.urls]
+"Bug Tracker" = "https://github.com/maxkrivich/flake8-github/issues"
+
+[tool.poetry_bumpversion.file."flake8_github/__version__.py"]
+
+[tool.poetry.plugins."flake8.report"]
+github = "flake8_github:GitHubFormatter"
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+flake8 = "^6.0.0"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.5.0"
+black = "^23.7.0"
+isort = "^5.12.0"
+bandit = "^1.7.5"
+poetry-bumpversion = "^0.3.1"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 88
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.mypy]
+ignore_missing_imports = true
+strict_optional = true
+check_untyped_defs = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+warn_unused_configs = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
