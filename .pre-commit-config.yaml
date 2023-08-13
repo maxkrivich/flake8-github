@@ -35,10 +35,10 @@ repos:
   #   rev: "4.2"
   #   hooks:
   #   -   id: pyroma
-  - repo: https://gitlab.com/smop/pre-commit-hooks
-    rev: v1.0.0
-    hooks:
-      - id: check-poetry
+  # - repo: https://gitlab.com/smop/pre-commit-hooks
+  #   rev: v1.0.0
+  #   hooks:
+  #     - id: check-poetry
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.24.1
     hooks:
