@@ -6,6 +6,8 @@
 
 > This extension seamlessly integrates with Flake8, providing clear and elegant error annotations directly on GitHub's interface, making it easier than ever to identify and address code issues during pull request reviews.
 
+<img width="754" alt="image" src="https://github.com/maxkrivich/flake8-github/assets/12199867/1dda4022-0223-486d-ba8a-480338471a3d">
+
 ## Table of Contents
 
 - [flake8-github](#flake8-github)
