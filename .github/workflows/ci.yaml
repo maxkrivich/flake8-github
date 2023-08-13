@@ -1,0 +1,35 @@
+name: Continues integration checks
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.6, 3.7, 3.8, 3.9]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install poetry
+          poetry install
+      - name: Lint with black
+        run: |
+          poetry run black --check .
+      - name: Lint with isort
+        run: |
+          poetry run isort --check .
+      - name: Type check with mypy
+        run: |
+          poetry run mypy .
+      - name: Security check with bandit
+        run: |
+          poetry run bandit --ini .bandit -r
