@@ -9,13 +9,13 @@ class GitHubFormatter(base.BaseFormatter):
     """Format flake8 errors as GitHub annotations."""
 
     def format(self, error: Violation) -> typing.Optional[str]:
-        return self._make_error(error)
+        return self._make_error(error)#asdasd
 
     @classmethod
     def _detect_type(cls, error: Violation) -> str:
         for code in ["W", "F", "C", "N"]:
             if error.code.startswith(code):
-                return "warning"
+                return "warnin         g"
         return "error"
 
     # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#setting-a-warning-message
