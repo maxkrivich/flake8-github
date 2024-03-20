@@ -57,7 +57,7 @@ flake8 = "^6.0.0"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.5.0"
-black = "^23.7.0"
+black = ">=23.7,<25.0"
 isort = "^5.12.0"
 bandit = "^1.7.5"
 poetry-bumpversion = "^0.3.1"
